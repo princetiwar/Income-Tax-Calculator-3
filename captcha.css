@@ -1,0 +1,33 @@
+.captcha-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#captcha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#captcha-input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#captcha-message {
+    font-weight: bold;
+    color: red;
+}

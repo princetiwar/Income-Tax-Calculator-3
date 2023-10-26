@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+    <style>
+        /* CSS styles for the calculator */
+        #calculateButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #calculateButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Income Tax Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Enter Your Income</h2>
+            <label for="income">Income: $</label>
+            <input type="number" id="income" min="0">
+            <button id="calculateButton" onclick="calculateTax()">Calculate Tax</button>
+        </section>
+        <section>
+            <h2>Income Tax Result</h2>
+            <p>Your estimated income tax is: $<span id="taxResult">0</span></p>
+        </section>
+    </main>
+    
+    <script>
+        // Function to calculate income tax
+        function calculateTax() {
+            const income = parseFloat(document.getElementById("income").value);
+            let tax = 0;
+            
+            // Simplified tax calculation (replace with actual tax calculation)
+            if (income <= 10000) {
+                tax = income * 0.1;
+            } else if (income <= 50000) {
+                tax = 10000 * 0.1 + (income - 10000) * 0.2;
+            } else {
+                tax = 10000 * 0.1 + 40000 * 0.2 + (income - 50000) * 0.3;
+            }
+            
+            document.getElementById("taxResult").textContent = tax.toFixed(2);
+        }
+        
+        // Add hover effect for the Calculate button
+        const calculateButton = document.getElementById("calculateButton");
+        calculateButton.addEventListener("mouseover", function() {
+            calculateButton.style.backgroundColor = "#45a049";
+        });
+        
+        calculateButton.addEventListener("mouseout", function() {
+            calculateButton.style.backgroundColor = "#4CAF50";
+        });
+    </script>
+</body>
+</html>

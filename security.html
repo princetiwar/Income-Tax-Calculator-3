@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-based CAPTCHA Example</title>
+    <link rel="stylesheet" type="text/css" href="captcha.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <h2>Verify You're Human</h2>
+        <div id="captcha">
+            <p id="captcha-text"></p>
+            <input type="text" id="captcha-input" placeholder="Enter CAPTCHA">
+            <button onclick="checkCaptcha()">Submit</button>
+        </div>
+        <p id="captcha-message"></p>
+    </div>
+    <script src="captcha.js"></script>
+</body>
+</html>
